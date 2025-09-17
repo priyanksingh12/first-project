@@ -27,4 +27,4 @@ Locate the file index.html.
 Double–click it → opens directly in your browser.
 
 🌐 🔥 Deployed Version :-
-View the live project here: manga-mart.netlify.app
+View the live project here: https://manga-mart.netlify.app/
