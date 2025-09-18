@@ -5,7 +5,7 @@ Built using HTML, CSS, and minimal JavaScript to simulate adding items to a cart
 
 ✨ Features
 
-📚 Browse manga products
+📚 Browse your favourite manga
 
 ➕ Add items to the cart (button changes to Added ✅)
 
@@ -25,6 +25,8 @@ Open the Project
 Locate the file index.html.
 
 Double–click it → opens directly in your browser.
+
+DEPENDENCIES- html/css/js
 
 🌐 🔥 Deployed Version :-
 View the live project here: https://manga-mart.netlify.app/
