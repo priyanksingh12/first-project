@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Manga Mart</title>
   <link rel="stylesheet" href="file.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
+
 <body>
 
   <header class="navbar">
     <div class="logo">MangaMart</div>
 
     <div class="hamburger">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+      <i class="fa-solid fa-bars"></i>
+    
     </div>
 
     <nav class="link" id="nav-links">
       <a href="">Home</a>
-      <a href="">&#10084; Favourites</a>
-      <a href=""><i class="fa-solid fa-cart-plus"></i> Cart</a>
+      <a href=""><i class="fa-solid fa-heart"></i></a>
+      <a href="cart.html"><i class="fa-solid fa-cart-plus"></i></a>
     </nav>
     <div class="in">
       <input type="text" placeholder="Search" id="se">
@@ -64,22 +65,22 @@
       <button class="add">Add to cart</button>
     </div>
   </div>
-   <h1 class="pop"> GENRE </h1>
-<div class="genre">
+  <h1 class="pop"> GENRE </h1>
+  <div class="genre">
     <div class="man">
-        <img src="https://i.pinimg.com/1200x/6f/3e/49/6f3e4903c1dd797aa39be8504361ab66.jpg"  alt="Romance manga">
-        <p>Romance manga</p>
+      <img src="https://i.pinimg.com/1200x/6f/3e/49/6f3e4903c1dd797aa39be8504361ab66.jpg" alt="Romance manga">
+      <p>Romance manga</p>
     </div>
-     <div class="man">
-        <img src="https://i.pinimg.com/736x/a5/58/e6/a558e6ae9b1a3f7843bfe059a5952b76.jpg"  alt="Sci-fi manga">
-        <p>Sci-fi manga</p>
+    <div class="man">
+      <img src="https://i.pinimg.com/736x/a5/58/e6/a558e6ae9b1a3f7843bfe059a5952b76.jpg" alt="Sci-fi manga">
+      <p>Sci-fi manga</p>
     </div>
-     <div class="man">
-        <img src="https://i.pinimg.com/736x/a2/91/c0/a291c0e822f52f545f936bfc57bd6e3f.jpg"  alt="Senien manga">
-        <p>Senien manga</p>
+    <div class="man">
+      <img src="https://i.pinimg.com/736x/a2/91/c0/a291c0e822f52f545f936bfc57bd6e3f.jpg" alt="Senien manga">
+      <p>Senien manga</p>
     </div>
 
-</div>
+  </div>
 
 
   <footer class="foot">
@@ -107,25 +108,24 @@
   <p class="copyright">@2025 all rights reserved</p>
 
   <script>
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.getElementById("nav-links");
+  const hamburger = document.querySelector(".hamburger");
+const navLinks = document.getElementById("nav-links");
+hamburger.onclick = () => navLinks.classList.toggle("active");
 
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-    
-    
-    let count = 0;
-    let cart = document.querySelector(".link a:nth-child(3)");
-    let buttons = document.querySelectorAll(".add");
+let count = 0;
+let cart = document.querySelector(".link a:nth-child(3)");
+let buttons = document.querySelectorAll(".add");
 
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].onclick = function () {
-        this.textContent = "Added ✅";
-        count++;
-        cart.textContent = "🛒 Cart (" + count + ")";
-      }
-    }
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = function () {
+    this.innerHTML = 'Added <i class="fa-solid fa-check"></i>';
+    count++;
+    cart.innerHTML = '<i class="fa-solid fa-cart-shopping"></i> (' + count + ')';
+  }
+}
+
+
   </script>
 </body>
+
 </html>

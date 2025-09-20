@@ -1,0 +1,98 @@
+body {
+      font-family: Arial, sans-serif;
+      background: #f7f7fa;
+      margin: 0;
+    }
+    header {
+      background: #222;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .cart-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .cart-item {
+      display: grid;
+      grid-template-columns: 80px 2fr 1fr 1fr 40px;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .cart-item img {
+      width: 100%;
+      border-radius: 6px;
+    }
+    .cart-details h3 {
+      margin: 0;
+      font-size: 1rem;
+    }
+    .cart-details p {
+      margin: 0.3rem 0;
+      color: #666;
+      font-size: 0.85rem;
+    }
+    .quantity {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .quantity button {
+      width: 25px;
+      height: 25px;
+      border: 1px solid #ccc;
+      background: #f7f7fa;
+      cursor: pointer;
+    }
+    .remove {
+      color: #ff4757;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-align: center;
+    }
+    .cart-summary {
+      text-align: right;
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      margin-bottom: 4.3rem;
+    }
+    .checkout-btn {
+        font-size: large;
+      height: 3rem;
+      background: #222;
+      color: white;
+      border: none;
+      padding: 0.4rem 1.4rem 0.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      float: right;
+      
+    }
+    .checkout-btn:hover {
+      background: #444;
+    }
+    @media (max-width: 700px) {
+      .cart-item {
+        grid-template-columns: 70px 1fr;
+        grid-template-rows: auto auto auto;
+      }
+      .cart-item .price, 
+      .cart-item .quantity, 
+      .cart-item .remove {
+        grid-column: span 2;
+      }
+    }
